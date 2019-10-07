@@ -38,15 +38,15 @@ export class FirstTestComponent implements OnInit {
         this.countResults();
         this.isTestStarted = false;
         clearInterval(this.interval);
-        this.timeCounter = 10;
-        if (this.testNum === 5) {
+        this.timeCounter = 15;
+        if (this.testNum === 5 ) {
           this.numbers = ['&#8381;', '&#8381;&#8381;', '&#8381;&#8381;&#8381;', '&#8381;&#8381;&#8381;&#8381;',
             '&#8381;&#8381;&#8381;&#8381;&#8381;', '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;',
             '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;', '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;',
             '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;',
             '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;'];
           // this.router.navigate(['/secondTest']);
-        } else if (this.testNum === 10) {
+        } else if (this.testNum === 10 ) {
           // Сделать выход
           this.result = true;
         }
