@@ -40,6 +40,9 @@ export class FirstTestComponent implements OnInit {
         if (this.testNum === 5) {
           this.numbers = ['&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;']
           // this.router.navigate(['/secondTest']);
+        } else if (this.numbers === 10) {
+          // Сделать выход
+          this.router.navigate(['/']);
         }
         // this.router.navigate(['/secondTest']);
       }
