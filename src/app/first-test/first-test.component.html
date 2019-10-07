@@ -1,25 +1,35 @@
 <div class="first-test">
-  <div class="time-counter">
+  <div *ngIf="!result" class="time-counter">
     Осталось {{timeCounter}} секунд
   </div>
-  <div class="test-monitor">
+  <div *ngIf="!result" class="test-monitor">
     <div *ngIf="testNum === 1 || testNum === 6" style="font-family: Calibri, serif" [innerHTML]="currentNum">
     </div>
-    <div *ngIf="testNum === 2 || testNum === 7" style="font-family: Oswald, serif">
-      {{currentNum}}
+    <div *ngIf="testNum === 2 || testNum === 7" style="font-family: Oswald, serif" [innerHTML]="currentNum">
     </div>
-    <div *ngIf="testNum === 3  || testNum === 8" style="font-family: 'Bad Script', cursive;">
-      {{currentNum}}
+    <div *ngIf="testNum === 3  || testNum === 8" style="font-family: 'Bad Script', cursive;" [innerHTML]="currentNum">
     </div>
-    <div *ngIf="testNum === 4  || testNum === 9" style="font-family: 'Lobster', cursive">
-      {{currentNum}}
+    <div *ngIf="testNum === 4  || testNum === 9" style="font-family: 'Lobster', cursive" [innerHTML]="currentNum">
     </div>
-    <div *ngIf="testNum === 5 || testNum === 10" style="font-family: 'Pacifico', cursive">
-      {{currentNum}}
+    <div *ngIf="testNum === 5 || testNum === 10" style="font-family: 'Pacifico', cursive" [innerHTML]="currentNum">
     </div>
     <div>
       <input *ngIf="isTestStarted" type="text" (change)="numberChanged($event.target.value); $event.target.value = '';" />
     </div>
     <button *ngIf="!isTestStarted" (click)="startTimer()">{{buttonText}}</button>
+  </div>
+  <div *ngIf="result" class="container">
+    <h2>Результаты первого теста:</h2>
+    <div>Шрифт Calibri: {{this.results[0]}} правильных ответов</div>
+    <div>Шрифт Oswald: {{this.results[1]}} правильных ответов</div>
+    <div>Шрифт Bad Script: {{this.results[2]}} правильных ответов</div>
+    <div>Шрифт Lobster: {{this.results[3]}} правильных ответов</div>
+    <div>Шрифт Pacifico: {{this.results[4]}} правильных ответов</div>
+    <h2>Результаты второго теста</h2>
+    <div>Шрифт Calibri: {{this.results[5]}} правильных ответов</div>
+    <div>Шрифт Oswald: {{this.results[6]}} правильных ответов</div>
+    <div>Шрифт Bad Script: {{this.results[7]}} правильных ответов</div>
+    <div>Шрифт Lobster: {{this.results[8]}} правильных ответов</div>
+    <div>Шрифт Pacifico: {{this.results[9]}} правильных ответов</div>
   </div>
 </div>

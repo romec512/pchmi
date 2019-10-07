@@ -7,13 +7,15 @@ import { StartingMonitorComponent } from './starting-monitor/starting-monitor.co
 import { FirstTestComponent } from './first-test/first-test.component';
 import {FormsModule} from '@angular/forms';
 import { SecondTestComponent } from './second-test/second-test.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartingMonitorComponent,
     FirstTestComponent,
-    SecondTestComponent
+    SecondTestComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

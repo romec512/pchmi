@@ -19,11 +19,13 @@ export class FirstTestComponent implements OnInit {
   inputFieldValue = '';
   results = [];
   interval;
+  result: boolean;
   constructor(private routerParam: Router) {
     this.timeCounter = 10;
     this.buttonText = 'Начать тест';
     this.router = routerParam;
     this.testNum = 0;
+    this.result = false;
   }
   startTimer() {
     let index = Math.floor(Math.random() * Math.floor(9)); // от 0 до 9
@@ -37,12 +39,16 @@ export class FirstTestComponent implements OnInit {
         this.isTestStarted = false;
         clearInterval(this.interval);
         this.timeCounter = 10;
-        if (this.testNum === 5) {
-          this.numbers = ['&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;']
+        if (this.testNum === 2) {
+          this.numbers = ['&#8381;', '&#8381;&#8381;', '&#8381;&#8381;&#8381;', '&#8381;&#8381;&#8381;&#8381;',
+            '&#8381;&#8381;&#8381;&#8381;&#8381;', '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;',
+            '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;', '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;',
+            '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;',
+            '&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;&#8381;'];
           // this.router.navigate(['/secondTest']);
-        } else if (this.numbers === 10) {
+        } else if (this.testNum === 4) {
           // Сделать выход
-          this.router.navigate(['/']);
+          this.result = true;
         }
         // this.router.navigate(['/secondTest']);
       }
