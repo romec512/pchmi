@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StartingMonitorComponent } from './starting-monitor/starting-monitor.component';
+import { FirstTestComponent } from './first-test/first-test.component';
+import {FormsModule} from '@angular/forms';
+import { SecondTestComponent } from './second-test/second-test.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StartingMonitorComponent,
+    FirstTestComponent,
+    SecondTestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

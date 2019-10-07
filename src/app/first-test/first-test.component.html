@@ -1,0 +1,26 @@
+<div class="first-test">
+  <div class="time-counter">
+    Осталось {{timeCounter}} секунд
+  </div>
+  <div class="test-monitor">
+    <div *ngIf="testNum === 1" style="font-family: Calibri, serif">
+      {{currentNum}}
+    </div>
+    <div *ngIf="testNum === 2" style="font-family: Oswald, serif">
+      {{currentNum}}
+    </div>
+    <div *ngIf="testNum === 3" style="font-family: 'Bad Script', cursive;">
+      {{currentNum}}
+    </div>
+    <div *ngIf="testNum === 4" style="font-family: 'Lobster', cursive">
+      {{currentNum}}
+    </div>
+    <div *ngIf="testNum === 5" style="font-family: 'Pacifico', cursive">
+      {{currentNum}}
+    </div>
+    <div>
+      <input *ngIf="isTestStarted" type="text" (change)="numberChanged($event.target.value); $event.target.value = '';" />
+    </div>
+    <button *ngIf="!isTestStarted" (click)="startTimer()">{{buttonText}}</button>
+  </div>
+</div>
