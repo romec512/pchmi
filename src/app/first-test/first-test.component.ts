@@ -38,7 +38,8 @@ export class FirstTestComponent implements OnInit {
         clearInterval(this.interval);
         this.timeCounter = 10;
         if (this.testNum === 5) {
-          this.router.navigate(['/secondTest']);
+          this.numbers = ['&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;','&#8381;']
+          // this.router.navigate(['/secondTest']);
         }
         // this.router.navigate(['/secondTest']);
       }

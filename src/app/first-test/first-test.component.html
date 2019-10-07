@@ -3,19 +3,18 @@
     Осталось {{timeCounter}} секунд
   </div>
   <div class="test-monitor">
-    <div *ngIf="testNum === 1" style="font-family: Calibri, serif">
+    <div *ngIf="testNum === 1 || testNum === 6" style="font-family: Calibri, serif" [innerHTML]="currentNum">
+    </div>
+    <div *ngIf="testNum === 2 || testNum === 7" style="font-family: Oswald, serif">
       {{currentNum}}
     </div>
-    <div *ngIf="testNum === 2" style="font-family: Oswald, serif">
+    <div *ngIf="testNum === 3  || testNum === 8" style="font-family: 'Bad Script', cursive;">
       {{currentNum}}
     </div>
-    <div *ngIf="testNum === 3" style="font-family: 'Bad Script', cursive;">
+    <div *ngIf="testNum === 4  || testNum === 9" style="font-family: 'Lobster', cursive">
       {{currentNum}}
     </div>
-    <div *ngIf="testNum === 4" style="font-family: 'Lobster', cursive">
-      {{currentNum}}
-    </div>
-    <div *ngIf="testNum === 5" style="font-family: 'Pacifico', cursive">
+    <div *ngIf="testNum === 5 || testNum === 10" style="font-family: 'Pacifico', cursive">
       {{currentNum}}
     </div>
     <div>
